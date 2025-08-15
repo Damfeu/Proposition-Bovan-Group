@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import { 
   Calendar, 
   Users, 
@@ -84,7 +84,7 @@ const ServicesSection = () => {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -95,7 +95,7 @@ const ServicesSection = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: {
       opacity: 1,

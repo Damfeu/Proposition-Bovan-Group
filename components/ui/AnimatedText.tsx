@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import { useRef } from 'react';
 
 interface AnimatedTextProps {
@@ -29,7 +29,7 @@ const AnimatedText = ({
 
   const words = text.split(' ');
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -40,7 +40,7 @@ const AnimatedText = ({
     },
   };
 
-  const wordVariants = {
+  const wordVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,

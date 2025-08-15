@@ -1,12 +1,19 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
+  "name": "bovann-group-website",
+  "version": "1.0.0",
+  "description": "Site web professionnel de Bovann Group - Communication & Digital",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod",
+    "deploy:test": "npm run build && npm start",
+    "analyze": "ANALYZE=true npm run build",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -68,5 +75,21 @@
     "typescript": "5.2.2",
     "vaul": "^0.9.9",
     "zod": "^3.23.8"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "framer-motion",
+    "communication",
+    "digital",
+    "marketing"
+  ],
+  "author": "ADODODJI Kokouvi Damaz & AMEKPO Mawuli Jean",
+  "license": "MIT"
 }

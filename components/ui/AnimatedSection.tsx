@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import { ReactNode, useRef } from 'react';
 
 interface AnimatedSectionProps {
@@ -25,10 +25,10 @@ const AnimatedSection = ({
   backgroundPattern = false
 }: AnimatedSectionProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once, margin });
+  const isInView = useInView(ref, { once, margin: margin as any });
 
-  const getDirectionalVariants = () => {
-    const baseVariants = {
+  const getDirectionalVariants = (): Variants => {
+    const baseVariants: Variants = {
       hidden: { opacity: 0 },
       visible: { 
         opacity: 1,
@@ -43,27 +43,55 @@ const AnimatedSection = ({
     switch (direction) {
       case 'up':
         return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, y: 50 },
-          visible: { ...baseVariants.visible, y: 0 }
+          hidden: { opacity: 0, y: 50 },
+          visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: {
+              duration: 0.8,
+              delay: delay * 0.2,
+              ease: "easeOut"
+            }
+          }
         };
       case 'down':
         return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, y: -50 },
-          visible: { ...baseVariants.visible, y: 0 }
+          hidden: { opacity: 0, y: -50 },
+          visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: {
+              duration: 0.8,
+              delay: delay * 0.2,
+              ease: "easeOut"
+            }
+          }
         };
       case 'left':
         return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, x: 50 },
-          visible: { ...baseVariants.visible, x: 0 }
+          hidden: { opacity: 0, x: 50 },
+          visible: { 
+            opacity: 1, 
+            x: 0,
+            transition: {
+              duration: 0.8,
+              delay: delay * 0.2,
+              ease: "easeOut"
+            }
+          }
         };
       case 'right':
         return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, x: -50 },
-          visible: { ...baseVariants.visible, x: 0 }
+          hidden: { opacity: 0, x: -50 },
+          visible: { 
+            opacity: 1, 
+            x: 0,
+            transition: {
+              duration: 0.8,
+              delay: delay * 0.2,
+              ease: "easeOut"
+            }
+          }
         };
       default:
         return baseVariants;
