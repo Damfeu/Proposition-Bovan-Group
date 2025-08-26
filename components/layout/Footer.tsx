@@ -135,21 +135,21 @@ const Footer = () => {
                   className="flex items-center gap-3 text-gray-300 hover:text-red-eclat transition-colors cursor-pointer"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>+33 1 23 45 67 89</span>
+                  <span>+228 70 25 65 65</span>
                 </motion.div>
                 <motion.div
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-3 text-gray-300 hover:text-red-eclat transition-colors cursor-pointer"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>contact@bovann-group.com</span>
+                  <span>contact@bovanngroup.com</span>
                 </motion.div>
                 <motion.div
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-3 text-gray-300 hover:text-red-eclat transition-colors cursor-pointer"
                 >
                   <MapPin className="w-4 h-4" />
-                  <span>Paris, France</span>
+                  <span>Lomé, Togo</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -209,7 +209,7 @@ const Footer = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 bg-red-eclat text-blanc-pur rounded-2xl font-semibold hover:bg-red-700 transition-colors duration-300"
               >
-                S'abonner
+                S&apos;abonner
               </motion.button>
             </div>
           </div>
@@ -272,7 +272,7 @@ const Footer = () => {
             >
               <Heart className="w-4 h-4" />
             </motion.span>
-            <span>par ADODODJI Kokouvi Damaz & AMEKPO Mawuli Jean</span>
+            <span>par AMEK Informatique</span>
           </motion.div>
         </div>
       </div>
